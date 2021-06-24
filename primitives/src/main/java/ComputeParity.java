@@ -5,7 +5,11 @@ public class ComputeParity {
     */
 
     public static short parity(long n) {
-
-        return 0;
+        short result = 0;
+        while (n > 0) {
+            result ^= 1;
+            n &= (n - 1);
+        }
+        return result;
     }
 }
